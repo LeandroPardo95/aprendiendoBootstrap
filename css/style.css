@@ -1,0 +1,8 @@
+main {
+    max-width: 1200px !important;
+}
+header a {
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+}
