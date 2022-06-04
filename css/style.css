@@ -1,8 +1,5 @@
 main {
-    max-width: 1200px !important;
+    max-width: 1200px !important; /*acomodar esto*/
 }
-header a {
-    display: block;
-    padding: 10px;
-    cursor: pointer;
-}
+
+/* arreglar la altura, que sea responsiva */
