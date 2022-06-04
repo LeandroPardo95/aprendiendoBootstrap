@@ -1,0 +1,6 @@
+poner scroll a nav
+poner iconos al nav y al menu de usuario
+hacer que el menu sea responsivo  ---> al 50%
+completar los modals
+hacer pagina login
+hacer tema negro

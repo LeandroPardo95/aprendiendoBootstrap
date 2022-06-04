@@ -1,0 +1,26 @@
+.hamburger {
+    display: none;
+    visibility: hidden;
+    z-index: 999;
+}
+
+@media screen and (max-width:768px){
+    .hamburger {
+        width: 3.5rem;
+        height: 3.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        margin: 0;
+        visibility: visible;
+    }
+    nav {
+        visibility: hidden;
+        display: none;
+    }
+    nav.is-active {
+        visibility: visible;
+        display:block;
+    }
+}
