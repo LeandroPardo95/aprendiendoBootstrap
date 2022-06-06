@@ -35,9 +35,13 @@
         <!-- menu de usuario -->
         <div class="user col-4 col-md-3 col-lg-2 d-flex justify-content-end f-1 align-items-center">
           <!-- boton de notificaciones -->
-          <a href="#" class="text-light nav-link">
-            <i class="bi bi-bell h5"></i>
-          </a>
+          <div>
+            <a href="#" class="text-light nav-link">
+              <!-- n° de notificiacion -->
+              <span class="badge badge-danger">4</span> <!-- acomodar esto!!! -->
+              <i class="bi bi-bell h5"></i>
+            </a>
+          </div>
           <!-- boton de mi cuenta -->
           <a href="#" class="text-light nav-link">
             <i class="bi bi-person-circle h3"></i>
@@ -62,7 +66,7 @@
 
               <!-- agregado Test -->
               <ul class="list-group list-group-flush">
-                <!-- item 1 -->
+                <!-- Alumnos -->
                 <li class="list-group-item p-0">
                   <a href="#ulAlumnos" data-toggle="collapse" class="nav-link d-flex justify-content-between align-items-center">
                     <i class="bi bi-mortarboard-fill"></i>
@@ -70,13 +74,13 @@
                     <span><i class="bi bi-arrow-down-short"></i></span>
                   </a>
                 </li>
-                  <!-- submenu item 1 -->
+                  <!-- submenu Alumnos  -->
                   <ul id="ulAlumnos" class="collapse">
                     <li><a href="#" class="nav-link">Ver todos</a></li>
                     <li><a href="#" class="nav-link" data-toggle="modal" data-target="#nuevoAlumno">Crear nuevo</a></li>
                   </ul>
 
-                <!-- item 2 -->
+                <!-- item Profesor -->
                 <li class="list-group-item p-0">
                   <a href="#ulProfesores" data-toggle="collapse" class="nav-link d-flex justify-content-between align-items-center">
                     <span><i class="bi bi-person"></i></span>
@@ -84,13 +88,13 @@
                     <span><i class="bi bi-arrow-down-short"></i></span>
                   </a>
                 </li>
-                  <!-- submenu item 2 -->
+                  <!-- submenu Profesor 2 -->
                   <ul id="ulProfesores" class="collapse">
                     <li><a href="#" class="nav-link">Ver todos</a></li>
-                    <li><a href="#" class="nav-link">Crear nuevo</a></li>
+                    <li><a href="#" class="nav-link" data-toggle="modal" data-target="#nuevoProfesor">Crear nuevo</a></li>
                   </ul>
                 
-                <!-- item 3 -->
+                <!-- item Administrativo -->
                 <li class="list-group-item p-0">
                   <a href="#ulAdministrativos" data-toggle="collapse" class="nav-link d-flex justify-content-between align-items-center">
                     <span><i class="bi bi-book"></i></span>
@@ -98,14 +102,14 @@
                     <span><i class="bi bi-arrow-down-short"></i></span>
                   </a>
                 </li>
-                  <!-- submenu item 3 -->
+                  <!-- submenu Administrativo -->
                   <ul id="ulAdministrativos" class="collapse">
                     <li><a href="#" class="nav-link">Ver todos</a></li>
-                    <li><a href="#" class="nav-link">Crear nuevo</a></li>
+                    <li><a href="#" class="nav-link" data-toggle="modal" data-target="#nuevoAdministrativo">Crear nuevo</a></li>
                     <li><a href="#" class="nav-link">Otras operaciones</a></li>
                   </ul>
 
-                <!-- item 4 -->
+                <!-- item Auxiliar -->
                 <li class="list-group-item p-0">
                   <a href="#ulAuxiliares" data-toggle="collapse" class="nav-link d-flex justify-content-between align-items-center">
                     <span><i class="bi bi-tools"></i></span>
@@ -113,14 +117,14 @@
                     <span><i class="bi bi-arrow-down-short"></i></span>
                   </a>
                 </li>
-                <!-- submenu item 4 -->
+                <!-- submenu Auxiliar -->
                 <ul id="ulAuxiliares" class="collapse">
                   <li><a href="#" class="nav-link">Ver todos</a></li>
-                  <li><a href="#" class="nav-link">Crear nuevo</a></li>
+                  <li><a href="#" class="nav-link" data-toggle="modal" data-target="#nuevoAuxiliar">Crear nuevo</a></li>
                   <li><a href="#" class="nav-link">Otras operaciones</a></li>
                 </ul>
 
-                <!-- item 5 -->
+                <!-- item Carreras -->
                 <li class="list-group-item p-0">
                   <a href="#ulCarreras" data-toggle="collapse" class="nav-link d-flex justify-content-between align-items-center">
                     <span><i class="bi bi-list-task"></i></span>
@@ -128,15 +132,15 @@
                     <span><i class="bi bi-arrow-down-short"></i></span>
                   </a>
                 </li>
-                <!-- submenu item 5 -->
+                <!-- submenu Carreras -->
                 <ul id="ulCarreras" class="collapse">
                   <li><a href="#" class="nav-link">Ver todos</a></li>
-                  <li><a href="#" class="nav-link">Crear nuevo</a></li>
+                  <li><a href="#" class="nav-link" data-toggle="modal" data-target="#nuevaCarrera">Crear nuevo</a></li>
                   <li><a href="#" class="nav-link">Otras operaciones</a></li>
                 </ul>
 
               </ul>
-                <!-- fin agregado -->
+                <!-- fin de nav -->
             </nav>
             
             <!-- contenido principal de la web -->
@@ -178,28 +182,337 @@
             MODALS -- SACAR DE ACA
     ======================================= -->
 
-      <!-- *************** nueva alumno -->
+      <!-- *************** NUEVO ALUMNO -->
       <!-- Modal -->
       <div class="modal fade" id="nuevoAlumno" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="nuevoAlumno">Modal title</h5>
+              <h5 class="modal-title" id="nuevoAlumno">Listar nuevo alumno</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div class="modal-body">
-              ...
+            <!-- ************ formulario **************** -->
+            <form>
+              <div class="modal-body">
+                <!-- *********** cuerpo del modal -->
+                <div class="form-group">
+                  <label>Persona</label>
+                  <select class="form-control" id="">
+                    <option>Nombre 1</option>
+                    <option>Nombre 2</option>
+                    <option>Nombre 3</option>
+                    <option>Nombre 4</option>
+                    <option>Nombre 5</option>
+                  </select>
+                  <a href="#" class="text-danger" data-toggle="modal" data-target="#nuevaPersona">¿No se encuentra registrada?</a>
+
+                </div>
+
+                <div class="form-group">
+                  <label>Carrera</label>
+                  <select class="form-control" id="">
+                    <option>Carrera 1</option>
+                    <option>Carrera 2</option>
+                    <option>Carrera 3</option>
+                    <option>Carrera 4</option>
+                    <option>Carrera 5</option>
+                  </select>
+
+              <!-- ************  fin del cuerpo del modal **************** -->
+
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <!-- *************** botones ********** -->
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+              <button type="submit" class="btn btn-primary">Guardar</button>
             </div>
+             </div>
+             <!-- ************ fin del formulario *********** -->
+            </form>
           </div>
         </div>
       </div>
       <!-- ***************** fin nuevo alumno -->
+
+
+
+      <!-- *************** NUEVO PROFESOR -->
+      <!-- Modal -->
+      <div class="modal fade" id="nuevoProfesor" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="nuevoProfesor">Cargar nuevo profesor</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <!-- ************ formulario **************** -->
+            <form>
+              <div class="modal-body">
+                <!-- *********** cuerpo del modal -->
+                <div class="form-group">
+                  <label>Persona</label>
+                  <select class="form-control" id="">
+                    <option>Nombre 1</option>
+                    <option>Nombre 2</option>
+                    <option>Nombre 3</option>
+                    <option>Nombre 4</option>
+                    <option>Nombre 5</option>
+                  </select>
+
+                  <a href="#" class="text-danger" data-toggle="modal" data-target="#nuevaPersona">¿No se encuentra registrada?</a>
+
+                </div>
+
+                <div class="form-group">
+                  <label>Carrera</label>
+                  <select class="form-control" id="">
+                    <option>Carrera 1</option>
+                    <option>Carrera 2</option>
+                    <option>Carrera 3</option>
+                    <option>Carrera 4</option>
+                    <option>Carrera 5</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label>Asignatura</label>
+                  <select class="form-control" id="">
+                    <option>Asignatura 1</option>
+                    <option>Asignatura 2</option>
+                    <option>Asignatura 3</option>
+                    <option>Asignatura 4</option>
+                    <option>Asignatura 5</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                    <label class="form-check-label" for="inlineRadio1">Titular</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">Provisional</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                    <label class="form-check-label" for="inlineRadio3">Suplente</label>
+                  </div>
+
+                </div>
+
+              <!-- ************  fin del cuerpo del modal **************** -->
+
+            <div class="modal-footer">
+              <!-- *************** botones ********** -->
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+              <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+             </div>
+             <!-- ************ fin del formulario *********** -->
+            </form>
+        </div>
+        </div>
+      </div>
+      <!-- ***************** fin nuevo profesor -->
+
+
+
+      <!-- *************** NUEVO ADMINISTRATIVO -->
+      <!-- Modal -->
+      <div class="modal fade" id="nuevoAdministrativo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="nuevoAdministrativo">Cargar nuevo administrativo</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <!-- ************ formulario **************** -->
+            <form>
+              <div class="modal-body">
+                <!-- *********** cuerpo del modal -->
+                <div class="form-group">
+                  <label>Persona</label>
+                  <select class="form-control" id="">
+                    <option>Nombre 1</option>
+                    <option>Nombre 2</option>
+                    <option>Nombre 3</option>
+                    <option>Nombre 4</option>
+                    <option>Nombre 5</option>
+                  </select>
+
+                  <a href="#" class="text-danger" data-toggle="modal" data-target="#nuevaPersona">¿No se encuentra registrada?</a>
+
+                </div>
+
+                <div class="form-group">
+                  <label>Cargo</label>
+                  <select class="form-control" id="">
+                    <option>Cargo 1</option>
+                    <option>Cargo 2</option>
+                    <option>Cargo 3</option>
+                    <option>Cargo 4</option>
+                    <option>Cargo 5</option>
+                  </select>
+                </div>
+
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                  <label class="form-check-label" for="inlineCheckbox1">Mañana</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                  <label class="form-check-label" for="inlineCheckbox2">Tarde</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                  <label class="form-check-label" for="inlineCheckbox3">Noche</label>
+                </div>
+
+              <!-- ************  fin del cuerpo del modal **************** -->
+
+            <div class="modal-footer">
+              <!-- *************** botones ********** -->
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+              <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+             </div>
+             <!-- ************ fin del formulario *********** -->
+            </form>
+        </div>
+        </div>
+      </div>
+      <!-- ***************** fin nuevo Administrativo -->
+
+
+      <!-- *************** NUEVO AUXILIAR -->
+      <!-- Modal -->
+      <div class="modal fade" id="nuevoAuxiliar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="nuevoAuxiliar">Cargar nuevo auxiliar</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <!-- ************ formulario **************** -->
+            <form>
+              <div class="modal-body">
+                <!-- *********** cuerpo del modal -->
+                <div class="form-group">
+                  <label>Persona</label>
+                  <select class="form-control" id="">
+                    <option>Nombre 1</option>
+                    <option>Nombre 2</option>
+                    <option>Nombre 3</option>
+                    <option>Nombre 4</option>
+                    <option>Nombre 5</option>
+                  </select>
+
+                  <a href="#" class="text-danger" data-toggle="modal" data-target="#nuevaPersona">¿No se encuentra registrada?</a>
+
+                </div>
+
+                <div class="form-group">
+                  <label>Cargo</label>
+                  <select class="form-control" id="">
+                    <option>Cargo 1</option>
+                    <option>Cargo 2</option>
+                    <option>Cargo 3</option>
+                    <option>Cargo 4</option>
+                    <option>Cargo 5</option>
+                  </select>
+                </div>
+                
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                  <label class="form-check-label" for="inlineCheckbox1">Mañana</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                  <label class="form-check-label" for="inlineCheckbox2">Tarde</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                  <label class="form-check-label" for="inlineCheckbox3">Noche</label>
+                </div>
+
+              <!-- ************  fin del cuerpo del modal **************** -->
+
+            <div class="modal-footer">
+              <!-- *************** botones ********** -->
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+              <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+             </div>
+             <!-- ************ fin del formulario *********** -->
+            </form>
+        </div>
+        </div>
+      </div>
+      <!-- ***************** fin nuevo Auxiliar -->
+
+
+      <!-- *************** NUEVO CARRERA -->
+      <!-- Modal -->
+      <div class="modal fade" id="nuevaCarrera" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="nuevaCarrera">Cargar nueva carrera</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <!-- ************ formulario **************** -->
+            <form>
+              <div class="modal-body">
+                <!-- *********** cuerpo del modal -->
+                
+                <div class="form-group">
+                  <label>Nombre de la carrera</label>
+                  <input type="text" class="form-control" id="" placeholder="Ingrese el nombre de la carrera">
+                </div>
+                <div class="form-group">
+                  <label>Abreviatura del nombre</label>
+                  <input type="text" class="form-control" id="" placeholder="Ingrese la abreviatura del nombre">
+                </div>
+
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                  <label class="form-check-label" for="inlineCheckbox1">Mañana</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                  <label class="form-check-label" for="inlineCheckbox2">Tarde</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                  <label class="form-check-label" for="inlineCheckbox3">Noche</label>
+                </div>
+
+              <!-- ************  fin del cuerpo del modal **************** -->
+
+            <div class="modal-footer">
+              <!-- *************** botones ********** -->
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+              <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+             </div>
+             <!-- ************ fin del formulario *********** -->
+            </form>
+        </div>
+        </div>
+      </div>
+      <!-- ***************** fin nueva Carrera -->
 
        <!-- =======================================
                   FIN DEMODALS
