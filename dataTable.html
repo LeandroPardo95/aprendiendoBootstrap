@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+
+    <title>Modelo de tabla de datos</title>
+
+</head>
+<body>
+    
+    <table id="tablaPersonas" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>Nombres</th>
+                <th>Apellido</th>
+                <th>Dirección</th>
+                <th>Localidad</th>
+                <th>Nacimiento</th>
+                <th>Telefono</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Nombres</th>
+                <th>Apellido</th>
+                <th>Dirección</th>
+                <th>Localidad</th>
+                <th>Nacimiento</th>
+                <th>Telefono</th>
+            </tr>
+        </tfoot>
+    </table>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    
+    <script>
+        $(document).ready(function () {
+        $('#tablaPersonas').DataTable({
+
+            language: {
+                "decimal": "",
+                "emptyTable": "No hay información",
+                "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+                "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
+                "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+                "infoPostFix": "",
+                "thousands": ",",
+                "lengthMenu": "Mostrar _MENU_ Entradas",
+                "loadingRecords": "Cargando...",
+                "processing": "Procesando...",
+                "search": "Buscar:",
+                "zeroRecords": "Sin resultados encontrados",
+                "paginate": {
+                    "first": "Primero",
+                    "last": "Ultimo",
+                    "next": "Siguiente",
+                    "previous": "Anterior"
+        }
+    },
+
+            ajax: 'datos/personas.json',
+            columns: [
+                { data: 'nombres' },
+                { data: 'apellido' },
+                { data: 'direccion' },
+                { data: 'localidad' },
+                { data: 'nacimiento' },
+                { data: 'telefono' },
+            ],
+    });
+});
+    </script>
+        
+</body>
+</html>
